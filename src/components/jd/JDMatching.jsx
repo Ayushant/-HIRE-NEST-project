@@ -630,20 +630,6 @@ export default function JDMatching({ toast, settings, totalCandidates }) {
           <div style={{ flex: 1, padding: '16px', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
             {jdTab === 'paste' ? (
               <>
-                <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '8px' }}>
-                  <button
-                    onClick={() => setJdText(EXAMPLE_JD)}
-                    style={{
-                      background: 'linear-gradient(135deg, #6366F1, #4F46E5)',
-                      color: '#fff', border: 'none', borderRadius: '7px',
-                      padding: '6px 14px', fontSize: '12px', fontWeight: 600,
-                      cursor: 'pointer', fontFamily: 'Inter, sans-serif',
-                      display: 'flex', alignItems: 'center', gap: '5px'
-                    }}
-                  >
-                    <ZapIcon size={12} /> Load Demo JD
-                  </button>
-                </div>
               <textarea
                 value={jdText}
                 onChange={e => setJdText(e.target.value)}
