@@ -1,0 +1,83 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400;1,14..32,500&display=swap');
+
+/* ── Reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background: #F8FAFC;
+  color: #1E293B;
+}
+
+/* ── Keyframes ──────────────────────────────────────────────────────── */
+@keyframes spin         { from { transform: rotate(0deg); }   to { transform: rotate(360deg); } }
+@keyframes errorShake   { 0%,100%{transform:translateX(0)} 15%,45%,75%{transform:translateX(-6px)} 30%,60%{transform:translateX(6px)} }
+@keyframes toastSlideIn { from { transform: translateX(110%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes fadeIn       { from { opacity: 0; }                to { opacity: 1; } }
+@keyframes slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes slideUpFade  { from { transform: translateY(16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes fadeInRow    { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes shimmer      { 0%,100%{opacity:1} 50%{opacity:0.45} }
+@keyframes progressPulse{ 0%{transform:translateX(-100%)} 100%{transform:translateX(220%)} }
+@keyframes pulse        { 0%,100%{opacity:0.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.04)} }
+@keyframes typewriter   { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── Scrollbar ──────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+/* Dark-surface scrollbar (sidebar / drawers) */
+.dark-scroll::-webkit-scrollbar-track { background: transparent; }
+.dark-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 10px; }
+.dark-scroll::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }
+
+/* ── Base elements ──────────────────────────────────────────────────── */
+button  { font-family: inherit; }
+input   { font-family: inherit; }
+textarea{ font-family: inherit; }
+select  { font-family: inherit; }
+
+a { color: #3B82F6; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Range input ────────────────────────────────────────────────────── */
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 5px;
+  border-radius: 4px;
+  background: #E2E8F0;
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #3B82F6;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 5px rgba(59,130,246,0.25);
+}
+
+/* ── Focus ring ─────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(59,130,246,0.6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Selection ──────────────────────────────────────────────────────── */
+::selection       { background: rgba(59,130,246,0.25); color: inherit; }
+::-moz-selection  { background: rgba(59,130,246,0.25); color: inherit; }
