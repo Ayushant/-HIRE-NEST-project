@@ -155,8 +155,11 @@ export default function PinAuth({ onAuthenticated }) {
           </div>
           <h1 style={{
             color: '#F1F5F9', fontSize: '26px', fontWeight: 700,
-            margin: '0 0 8px', letterSpacing: '-0.5px'
-          }}>RecruitAI</h1>
+            margin: '0 0 4px', letterSpacing: '-0.5px'
+          }}>HIRE NEST</h1>
+          <p style={{ color: '#3B82F6', fontSize: '11px', margin: '0 0 8px', fontWeight: 600 }}>
+            Workflow Pvt Ltd
+          </p>
           <p style={{ color: '#64748B', fontSize: '14px', margin: 0, fontWeight: 400 }}>
             Sign in to your workspace
           </p>
