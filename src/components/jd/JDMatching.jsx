@@ -313,11 +313,6 @@ export default function JDMatching({ toast, settings, totalCandidates }) {
       return;
     }
 
-    if (!localStorage.getItem('groq_api_key') && !settings?.groqKey) {
-      toast.error('Please set your Groq API key in Settings.');
-      return;
-    }
-
     setIsMatching(true);
     setScanMsgIndex(0);
     setMatches([]);

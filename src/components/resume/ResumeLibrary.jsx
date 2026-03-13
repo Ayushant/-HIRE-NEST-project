@@ -101,10 +101,6 @@ export default function ResumeLibrary({ toast, settings }) {
 
   const startProcessing = async () => {
     if (!selectedFiles.length) return;
-    if (!localStorage.getItem('groq_api_key') && !settings?.groqKey) {
-      toast.error('Please set your Groq API key in Settings first.');
-      return;
-    }
 
     const newQueue = selectedFiles.map((file, i) => ({
       id: i,
